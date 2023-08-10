@@ -1,0 +1,22 @@
+title: 🛠️ This PR fixes {{ issue_count }} issues
+branchName: fix/{{ issue_count }}-issues
+commitMessage: "fix: {{ issue_count }} Snyk issues"
+description: |
+  Fixes {{ issue_count }} issues
+  
+  **Tickets**
+  {{ #each jira_ids }}
+  - Fixes {{ self }}
+  {{ /each }}
+
+  Fix applied by {{ snyk_org_name }}
+  Fixes {{ package_name }}
+  Fix is applied by moving from {{ package_from}}
+  Fix is applied by moving to {{ package_to}}
+  branchName: fix/{{ issue_count }}-issues
+  Is this pr a fix pr? {{ is_fix_pr }}
+  Is this pr a backlog pr? {{ is_backlog_pr }}
+  Is this pr an upgrade pr? {{ is_upgrade_pr }}
+  This is a {{ snyk_pull_request_type }} pull request
+  
+  To find more details, see the Snyk project [{{ snyk_project_name }}]({{ snyk_project_url }})
